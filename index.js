@@ -1,16 +1,13 @@
 const express = require('express');
 const server = express();
 const PORT = process.env.PORT || 5000;
+const projects = require('./data/projects-router');
 
 server.use(express.json());
+server.use('/projects', projects);
 
-server.use((err, req, res, next) => {
-    console.log(err);
-    res.status(500).json({
-        message: 'Something went wrong.'
-    });
-});
 
 server.listen(PORT, () => {
     console.log(`\n== API running on port ${PORT} ==\n`);
 });
+

@@ -4,7 +4,6 @@
   "description": "adding data persistence to APIs",
   "main": "index.js",
   "scripts": {
-    "test": "test",
     "server": "nodemon index.js"
   },
   "repository": {
